@@ -3,8 +3,8 @@ from glob import glob
 import torch
 from monai.data import DataLoader, Dataset, CacheDataset
 from monai.utils import set_determinism
-from training_setup.augmentations.train_augment import get_train_transforms
-from training_setup.augmentations.test_augment import get_test_transforms
+from augmentations import get_train_transforms
+from augmentations import get_test_transforms
 
 def prepare_semi_supervised(in_dir, cache=False):
     set_determinism(seed=0)
